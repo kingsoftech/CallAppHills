@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/drawable/correct_option_border_bg.xml" value="0.1" />
+        <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/drawable/white_color_border_bg.xml" value="0.1" />
         <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/drawable/wrong_option_border_bg.xml" value="0.1505" />
-        <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
+        <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/SOFTECH/AndroidStudioProjects/CallAppHills/app/src/main/res/layout/item_list.xml" value="0.1921875" />
       </map>
     </option>

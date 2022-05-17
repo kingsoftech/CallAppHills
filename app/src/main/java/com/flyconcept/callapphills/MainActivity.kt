@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         }
         val data1 = DataList(1, "ListA", "Play me")
         dataList.add(data1)
+        val data2 = DataList(2, "List2", "Play me 1")
+        dataList.add(data2)
         dataListAdapter.updateCountries(dataList)
         buttonPressedChecker(button)
         button.setOnClickListener {

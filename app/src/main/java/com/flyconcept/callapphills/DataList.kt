@@ -1,8 +1,17 @@
 package com.flyconcept.callapphills
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "list_of_colors")
 data class DataList(
-    val id:Int = 0,
-    val listName:String = "",
-    val song:String = "",
-    val colorList:ArrayList<String> = ArrayList()
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
+    @ColumnInfo
+    val listName: String = "",
+    @ColumnInfo
+    val song: String = "",
+    @ColumnInfo
+    val colorList: ArrayList<Color> = ArrayList()
 )
