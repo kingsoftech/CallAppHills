@@ -1,9 +1,10 @@
-package com.flyconcept.callapphills
+package com.flyconcept.callapphills.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.flyconcept.callapphills.DataList
 import com.flyconcept.callapphills.databinding.ItemListBinding
 
 class ListItemAdapterClass(private  val context: Context, private val list: ArrayList<DataList>):RecyclerView.Adapter<RecyclerView.ViewHolder>() {

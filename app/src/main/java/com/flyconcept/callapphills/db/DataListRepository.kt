@@ -1,6 +1,7 @@
-package com.flyconcept.callapphills
+package com.flyconcept.callapphills.db
 
 import androidx.annotation.WorkerThread
+import com.flyconcept.callapphills.DataList
 import kotlinx.coroutines.flow.Flow
 
 class DataListRepository(private val dataListDao: DataListDao) {
@@ -11,9 +12,10 @@ class DataListRepository(private val dataListDao: DataListDao) {
     }
 
     val allDataList: Flow<List<DataList>> =dataListDao.getAllDishesList()
-
+    fun filteredListM( value:String):Flow<List<DataList>> =dataListDao.getColorList(value)
     @WorkerThread
     suspend fun removeList(dataList: DataList){
         dataListDao.deleteDataListDetails(dataList)
     }
+
 }

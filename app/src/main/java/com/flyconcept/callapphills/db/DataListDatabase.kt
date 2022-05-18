@@ -1,11 +1,12 @@
-package com.flyconcept.callapphills
+package com.flyconcept.callapphills.db
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
+import com.flyconcept.callapphills.ColorListArrayTypeConverter
+import com.flyconcept.callapphills.DataList
 
-@Database(entities = arrayOf(DataList::class), version = 1, exportSchema = false)
+@Database(entities = [DataList::class], version = 1, exportSchema = false)
+@TypeConverters(ColorListArrayTypeConverter::class)
 public abstract class DataListDatabase : RoomDatabase() {
 
     abstract fun DataListDao(): DataListDao

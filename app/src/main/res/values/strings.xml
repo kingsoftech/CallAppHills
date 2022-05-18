@@ -1,3 +1,5 @@
 <resources>
 	<string name="app_name">CallAppHills</string>
+	<string name="disable">Disable</string>
+	<string name="enabled">Enabled</string>
 </resources>

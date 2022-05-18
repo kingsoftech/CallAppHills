@@ -1,12 +1,13 @@
 package com.flyconcept.callapphills
 
 import androidx.lifecycle.*
+import com.flyconcept.callapphills.db.DataListRepository
 import kotlinx.coroutines.launch
 
 class MainActivityViewModel(private val repository: DataListRepository) :ViewModel(){
 
     val allList:LiveData<List<DataList>> = repository.allDataList.asLiveData()
-
+    fun getFilteredList(value:String):LiveData<List<DataList>> = repository.filteredListM(value).asLiveData()
     fun insert(list: DataList) = viewModelScope.launch {
         // Call the repository function and pass the details.
         repository.insertDataListDetails(list)
