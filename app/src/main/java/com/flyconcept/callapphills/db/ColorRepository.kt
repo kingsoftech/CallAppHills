@@ -1,7 +1,6 @@
 package com.flyconcept.callapphills.db
 
 import androidx.annotation.WorkerThread
-import com.flyconcept.callapphills.DataList
 import com.flyconcept.callapphills.model.Color
 import kotlinx.coroutines.flow.Flow
 
