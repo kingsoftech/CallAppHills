@@ -11,9 +11,6 @@ interface DataListDao {
     @Query("SELECT * FROM LIST_OF_COLORS ORDER BY ID")
     fun getAllDishesList(): Flow<List<DataList>>
 
-    @Query("SELECT  FROM ")
-    fun getColor(colorName: String): Flow<List<DataList>>
-
     @Delete
     suspend fun deleteDataListDetails(list: DataList)
 }

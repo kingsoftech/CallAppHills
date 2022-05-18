@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     val dataList = ArrayList<DataList>()
     var activityMainBinding: ActivityMainBinding? = null
     var dataListAdapter = ListItemAdapterClass(this, arrayListOf())
+    lateinit var viewModel:MainActivityViewModel
+    private val mainActivityViewModel: MainActivityViewModel by viewModels {
+        MainActivityViewModelFactory((application as DataListApplication).repository)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,9 +28,13 @@ class MainActivity : AppCompatActivity() {
             layoutManager =LinearLayoutManager(context)
             adapter = dataListAdapter
         }
-        val data1 = DataList(1, "ListA", "Play me")
+
+        val color1 = arrayListOf<String>("Pink", "red", "purple")
+        val color2 = arrayListOf<String>("Green", "Blue", "yellow")
+        val data1 = DataList(1, "ListA", "Play me", color1)
         dataList.add(data1)
-        val data2 = DataList(2, "List2", "Play me 1")
+
+        val data2 = DataList(2, "List2", "Play me 1", color2)
         dataList.add(data2)
         dataListAdapter.updateCountries(dataList)
         buttonPressedChecker(button)

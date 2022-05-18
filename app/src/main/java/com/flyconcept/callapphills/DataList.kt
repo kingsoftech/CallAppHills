@@ -13,5 +13,5 @@ data class DataList(
     @ColumnInfo
     val song: String = "",
     @ColumnInfo
-    val colorList: ArrayList<Color> = ArrayList()
+    val colorList: ArrayList<String> = ArrayList()
 )
